@@ -55,5 +55,41 @@ $(document).ready(function(){
                     alert("At least one row for 'Add Sizes' and 'Marker Ratio' must remain.");
                 }
             });
+        
+        // Fabric sets
+        // const fabricSet1 = [
+        //         { value: "", text: "Type Fabric", disabled: true, selected: true },
+        //         { value: "self", text: "Self" },
+        //         { value: "lining", text: "Lining" },
+        //         { value: "underlining", text: "Underlining" },
+        //         { value: "tearaway", text: "Tear Away" }
+        // ];
+
+        // const fabricSet2 = [
+        //         { value: "", text: "Type Fabric", disabled: true, selected: true },
+        //         { value: "cotton", text: "Cotton" },
+        //         { value: "silk", text: "Silk" },
+        //         { value: "wool", text: "Wool" },
+        //         { value: "polyester", text: "Polyester" }
+        // ];
+
+        // // Function to update fabric dropdown
+        // function updateFabricDropdown(options) {
+        //         const selectFabric = $("#select_fabric");
+        //         selectFabric.empty();
+        //         options.forEach(option => {
+        //         selectFabric.append(new Option(option.text, option.value, option.disabled, option.selected));
+        //         });
+        // }
+
+        // // Next Fabric functionality
+        // $("#next_fabric").on("click", function() {
+        //         updateFabricDropdown(fabricSet2);
+        // });
+
+        // // Back Fabric functionality
+        // $("#back_fabric").on("click", function() {
+        //         updateFabricDropdown(fabricSet1);
+        // });
 })
 

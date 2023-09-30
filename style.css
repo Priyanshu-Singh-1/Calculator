@@ -44,13 +44,6 @@
         font-weight: bold;
     }
     
-    .next_fabric{
-        background-color: rgb(100, 246, 100);
-    }
-
-    .back_fabric{
-        background-color: grey;
-    }
 
     #add{
         padding: 2px 20px;
@@ -115,6 +108,35 @@
         transition: 1s;
     }
 
+    #next_fabric{
+        padding: 20px;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 7px;
+        background-color: lightgreen;
+    }
+
+    #next_fabric:hover{
+        background-color: greenyellow;
+        transition: 1s;
+    }
+
+    #back_fabric{
+        padding: 20px;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 7px;
+        background-color: rgb(138, 171, 205);
+    }
+
+    #back_fabric:hover{
+        background-color: rgb(65, 74, 84);
+        transition: 1s;
+        color: white;
+    }
+
     .remove{
         background-color: red;
     }
@@ -122,6 +144,7 @@
     .footer{
         font-size: 25px;
         font-weight: bolder;
+        
     }
     
     @media screen and (max-width: 600px) {
