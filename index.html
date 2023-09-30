@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+        <title>Calculator</title>
+</head>
+<body>
+        <div id="container">
+                <table class="responsive-table" id="makepdf">
+                        <thead>
+                            <tr>
+                                <th class="bold_category" >Category</th>
+                                <th colspan="2">
+                                        <select name="select_category" id="select_category" class="option_dropdown">
+                                                <option value="" disabled selected>Select Category</option>
+                                                <option value="tops">Tops</option>
+                                                <option value="shorts">Shorts</option>
+                                                <option value="pants">Pants</option>
+                                                <option value="shirts">Shirts</option>
+                                        </select>
+                                </th>
+                                <th class="bold_category" colspan="2">Brand/Style</th>
+                                <th class="bold_category"  colspan="3">
+                                        Enter Description
+                                </th>
+                            </tr>
+        
+                        </thead>
+                        <tbody>
+                                <tr>
+                                        <th class="bold_category">Description</th>
+                                        <td colspan="2">
+                                                <select name="select_category" id="select_category" class="option_dropdown fabric_type">
+                                                        <option value="" disabled selected class="fabric_type">Fabric #</option>
+                                                        <option value="fabric#1" class="fabric_type">Fabric #1</option>
+                                                        <option value="fabric#2" class="fabric_type">Fabric #2</option>
+                                                        <option value="fabric#3" class="fabric_type">Fabric #3</option>
+                                                        <option value="fabric#4" class="fabric_type">Fabric #4</option>
+                                                </select>
+                                        </td>
+                                        <td colspan="2" class="fabric_type">Fabric Cuttable</td>
+                                        <td colspan="3" class="fabric_type">Marker Type</td>
+                                </tr>
+        
+                                <tr>
+                                        <th class="bold_category"> Fabric Type</th>
+                                        <td colspan="2">
+                                                <select name="select_fabric" id="select_fabric" class="option_dropdown">
+                                                        <option value="" disabled selected>Type Fabric</option>
+                                                        <option value="self">Self</option>
+                                                        <option value="lining">Lining</option>
+                                                        <option value="underlining">Underlining</option>
+                                                        <option value="tearaway">Tear Away</option>
+                                                </select>
+                                        </td>
+                                        <td colspan="2">
+                                                <select name="select_width" id="select_width" class="option_dropdown">
+                                                        <option value="" disabled selected>Select Width</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                </select>
+                                        </td>
+                                        <td colspan="3">
+                                                <select name="select_direction" id="select_direction" class="option_dropdown">
+                                                        <option value="" disabled selected>Select Direction</option>
+                                                        <option value="1size">1 size (1 Way)</option>
+                                                        <option value="1-size">1-size (2 Way)</option>
+                                                        <option value="halfsize">Half Size (1 Way)</option>
+                                                        <option value="halfsize2">Half Size (2 Way)</option>
+                                                </select>
+                                        </td>
+                                </tr>
+                                <tr>
+                                        <th class="bold_category">Add Sizes <br>
+                                                <button id="add">+</button>
+                                        </th>
+        
+                                        <td>
+                                                <input type="text" placeholder="Size 1" class="box-input">
+                                        </td>
+                                        <td>
+                                                <input type="text" placeholder="Size 2" class="box-input">
+                                        </td>
+                                        
+                                        <!-- ====================  -->
+                                        <td>
+                                                <input type="text" placeholder="width 1" class="box-input">
+                                        </td>
+                                        <td>
+                                                <input type="text" placeholder="width 2" class="box-input">
+                                        </td>
+        
+                                        <!-- ======================= -->
+                                        <td>
+                                                <input type="text" placeholder="direction 1" class="box-input">
+                                        </td>
+                                        <td>
+                                                <input type="text" placeholder="direction 2" class="box-input">
+                                        </td>
+        
+                                        <td>
+                                                <input type="text" placeholder="direction 3" class="box-input">
+                                        </td>
+                                        
+        
+                                </tr>
+        
+                                <tr id="marker">
+                                        <th class="bold_category">Marker ratio
+                                                <!-- <button id="add">+</button> -->
+                                        </th>
+                                        
+                                        <td>
+                                                <input type="text" placeholder="Size 1" class="box-input">
+                                        </td>
+                                        <td>
+                                                <input type="text" placeholder="Size 2" class="box-input">
+                                        </td>
+                                        
+                                        <!-- ====================  -->
+                                        <td>
+                                                <input type="text" placeholder="width 1" class="box-input">
+                                        </td>
+                                        <td>
+                                                <input type="text" placeholder="width 2" class="box-input">
+                                        </td>
+        
+                                        <!-- ======================= -->
+                                        <td>
+                                                <input type="text" placeholder="direction 1" class="box-input">
+                                        </td>
+                                        <td>
+                                                <input type="text" placeholder="direction 2" class="box-input">
+                                        </td>
+        
+                                        <td>
+                                                <input type="text" placeholder="direction 3" class="box-input">
+                                        </td>
+                                        
+        
+                                </tr>
+        
+                                <tr>
+                                        <th class="bold_category" class="remove">Remove Sizes
+                                                <button id="minus">-</button>
+                                        </th>
+                                        <td colspan="2" class="next_fabric">
+                                                Next Fabric
+                                        </td>
+        
+                                        <td colspan="2" class="back_fabric">
+                                                Back Fabric
+                                        </td>
+                                        <td colspan="1" class="clear_all">
+                                                <button id="clear_all">Clear All</button> 
+                                        </td>
+                                        <td colspan="2" class="generate">
+                                               <button id="generate">Generate</button>
+                                        </td>
+                                </tr>
+        
+                                <tr>
+                                        <th colspan="8" class="footer">
+                                                Marker Request Generator By: Smart Pattern Making.com
+                                        </th>
+                                </tr>
+                        </tbody>
+                    </table>
+        </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="./js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.min.js"></script>
+
+
+</html>

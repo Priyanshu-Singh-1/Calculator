@@ -1,0 +1,154 @@
+.responsive-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    th {
+        background-color: #f2f2f2;
+    }
+    
+    tr:hover {
+        background-color: #c6c2c2;
+    }
+    
+    /* Style for the dropdown */
+    select, .box-input {
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-radius: 6px;
+        box-sizing: border-box;
+    }
+
+    .bold_category{
+        font-size: 18px;
+    }
+    .option_dropdown, .next_fabric, .back_fabric, .clear_all, .generate{
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .option_dropdown, .box-input{
+        outline: none;
+        text-align: center;
+    }
+    .fabric_type{
+        color: orange;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .next_fabric{
+        background-color: rgb(100, 246, 100);
+    }
+
+    .back_fabric{
+        background-color: grey;
+    }
+
+    #add{
+        padding: 2px 20px;
+        border: 2px solid darkgreen;
+        border-radius: 7px;
+        font-size: 24px;
+        background-color: lightgreen;
+        font-weight: bolder;
+    }
+    #add:hover{
+        background-color: rgb(0, 179, 0);
+        transition: 1s;
+        border: 2px solid white;
+        color: white;
+    }
+
+    #minus{
+        padding: 2px 20px;
+        border: 2px solid darkgreen;
+        border-radius: 7px;
+        font-size: 34px;
+        font-weight: bolder;
+        background-color: rgb(250, 140, 140);
+    }
+
+    #minus:hover{
+        background-color: red;
+        transition: 1s;
+        border: 2px solid white;
+        color: white;
+    }
+
+
+
+    #generate{
+        padding: 10px;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 7px;
+        background-color: black;
+        color: white;
+    }
+
+    #generate:hover{
+        background-color: #676565;
+        transition: 1s;
+    }
+
+    #clear_all{
+        padding: 10px;
+        border: none;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 7px;
+        background-color: lightblue;
+    }
+
+    #clear_all:hover{
+        background-color: rgb(57, 57, 228);
+        color: white;
+        transition: 1s;
+    }
+
+    .remove{
+        background-color: red;
+    }
+
+    .footer{
+        font-size: 25px;
+        font-weight: bolder;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .responsive-table, .responsive-table thead, .responsive-table tbody, .responsive-table th, .responsive-table td, .responsive-table tr {
+            display: block;
+        }
+    
+        .responsive-table thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+    
+        .responsive-table td {
+            border: none;
+            position: relative;
+            padding-left: 50%;
+        }
+    
+        .responsive-table td:before {
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            content: attr(data-title);
+        }
+    }
+    
